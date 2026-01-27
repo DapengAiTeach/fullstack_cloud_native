@@ -5,7 +5,9 @@ DEBUG = False
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f*gf*=73z10c1dwgq(1k!z%belzxsx$8lc*23&8g132w6et+pq'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-ALLOWED_HOSTS = []
+
+# 生产环境请配置具体域名
+ALLOWED_HOSTS = ['*']  
 
 
 # 应用配置
