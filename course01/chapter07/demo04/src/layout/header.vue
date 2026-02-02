@@ -1,8 +1,9 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
 const isMenuOpen = ref(false)
 const windowWidth = ref(0)
 
@@ -78,7 +79,7 @@ const toggleTheme = () => {
             @click="navigateTo(item.path)"
             :class="[
               'px-3 py-2 rounded-md text-sm font-medium transition-all duration-200',
-              $route.path === item.path
+              route.path === item.path
                 ? 'bg-blue-600 text-white'
                 : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
             ]"
@@ -158,7 +159,7 @@ const toggleTheme = () => {
             @click="navigateTo(item.path)"
             :class="[
               'w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200',
-              $route.path === item.path
+              route.path === item.path
                 ? 'bg-blue-600 text-white'
                 : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
             ]"
