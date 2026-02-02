@@ -8,12 +8,6 @@ const routes = [
         children: [
             { path: '', component: () => import('@/page/home.vue') },
             { path: 'blog', component: () => import('@/page/blog.vue') },
-            { path: 'categories', component: () => import('@/page/categories.vue') },
-            { path: 'about', component: () => import('@/page/about.vue') },
-            { path: 'contact', component: () => import('@/page/contact.vue') },
-            { path: 'profile', component: () => import('@/page/profile.vue') },
-            { path: 'favorites', component: () => import('@/page/favorites.vue') },
-            { path: 'settings', component: () => import('@/page/settings.vue') },
         ],
     },
 ]
