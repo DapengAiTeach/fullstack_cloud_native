@@ -3,12 +3,13 @@ import { ElConfigProvider } from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import 'dayjs/locale/zh-cn'
 
+import login from '@/page/login.vue';
 </script>
 
 <template>
   <div>
     <el-config-provider :locale="zhCn">
-      <el-button>按钮</el-button>
+      <login />
     </el-config-provider>
   </div>
 </template>
