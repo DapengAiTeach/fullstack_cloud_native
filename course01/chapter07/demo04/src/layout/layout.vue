@@ -1,7 +1,11 @@
+<script setup>
+import Header from './header.vue'
+import Footer from './footer.vue'
+</script>
 <template>
-    <h1>头部</h1>
-    <div>
+    <Header/>
+    <main class="container-wrapper py-8">
         <router-view />
-    </div>
-    <h1>底部</h1>
+    </main>
+    <Footer/>
 </template>
