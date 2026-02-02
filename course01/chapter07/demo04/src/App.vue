@@ -1,15 +1,13 @@
 <script setup>
-import { ElButton, ElConfigProvider } from "element-plus";
+import { ElConfigProvider } from "element-plus";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 import "dayjs/locale/zh-cn";
-
-import blog from "./page/blog.vue";
 </script>
 
 <template>
   <div>
     <el-config-provider :locale="zhCn">
-      <blog />
+      <router-view />
     </el-config-provider>
   </div>
 </template>
